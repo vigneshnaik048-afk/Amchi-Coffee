@@ -137,4 +137,25 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
-    
+    // Category Filter Logic
+const filterBtns = document.querySelectorAll('.filter-btn');
+const menuItems = document.querySelectorAll('.menu-card');
+
+filterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    // Remove active class from all buttons
+    filterBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    const selectedCategory = btn.getAttribute('data-category');
+
+    menuItems.forEach(item => {
+      if (selectedCategory === 'all' || item.getAttribute('data-category') === selectedCategory) {
+        item.style.display = 'block';
+      } else {
+        item.style.display = 'none';
+      }
+    });
+  });
+});
+
