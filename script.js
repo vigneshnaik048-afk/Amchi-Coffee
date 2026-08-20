@@ -1,25 +1,20 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // 1. Navigation & Gallery Setup
   const galleryNav = document.getElementById("nav-gallery");
   const gallerySection = document.getElementById("gallery");
   const galleryContainer = document.getElementById("gallery-container");
   const slideLeft = document.getElementById("slide-left");
   const slideRight = document.getElementById("slide-right");
 
-  // 1. Smooth Scroll for Gallery Navigation Link
   if (galleryNav && gallerySection) {
     galleryNav.addEventListener("click", (e) => {
       e.preventDefault();
-
-      // Highlight active link
-      document.querySelectorAll("nav a").forEach((link) => link.classList.remove("active"));
+      document.querySelectorAll(".nav-links a").forEach((link) => link.classList.remove("active"));
       galleryNav.classList.add("active");
-
-      // Scroll smoothly to gallery section
       gallerySection.scrollIntoView({ behavior: "smooth" });
     });
   }
 
-  // 2. Horizontal Scroll Arrow Controls
   if (slideRight && galleryContainer) {
     slideRight.addEventListener("click", () => {
       galleryContainer.scrollBy({ left: 160, behavior: "smooth" });
@@ -31,9 +26,8 @@ document.addEventListener("DOMContentLoaded", () => {
       galleryContainer.scrollBy({ left: -160, behavior: "smooth" });
     });
   }
-});
 
-document.addEventListener("DOMContentLoaded", () => {
+  // 2. Reservation & OTP System
   const modal = document.getElementById("reservation-modal");
   const closeModalBtn = document.getElementById("close-modal");
   const resForm = document.getElementById("reservation-form");
@@ -48,24 +42,22 @@ document.addEventListener("DOMContentLoaded", () => {
   const navResBtn = document.getElementById("nav-reservation");
   const bottomBarBtn = document.querySelector(".reserve-btn");
 
-  // Enter your 10-digit phone number here (with country code like 91 for India)
   const OWNER_PHONE = "919876543210"; 
-
   let generatedOTP = null;
 
   const openModal = (e) => {
     if (e) e.preventDefault();
-    modal.classList.add("active");
+    if (modal) modal.classList.add("active");
   };
 
   const closeModal = () => {
-    modal.classList.remove("active");
+    if (modal) modal.classList.remove("active");
     setTimeout(() => {
-      step1.style.display = "block";
-      step2.style.display = "none";
-      formContainer.style.display = "block";
-      successContainer.style.display = "none";
-      resForm.reset();
+      if (step1) step1.style.display = "block";
+      if (step2) step2.style.display = "none";
+      if (formContainer) formContainer.style.display = "block";
+      if (successContainer) successContainer.style.display = "none";
+      if (resForm) resForm.reset();
     }, 300);
   };
 
@@ -78,7 +70,6 @@ document.addEventListener("DOMContentLoaded", () => {
     if (e.target === modal) closeModal();
   });
 
-  // STEP 1: Generate & Send OTP
   if (sendOtpBtn) {
     sendOtpBtn.addEventListener("click", () => {
       const name = document.getElementById("res-name").value;
@@ -99,7 +90,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // STEP 2: Verify OTP & Send to WhatsApp / LocalStorage
   if (resForm) {
     resForm.addEventListener("submit", (e) => {
       e.preventDefault();
@@ -136,26 +126,26 @@ document.addEventListener("DOMContentLoaded", () => {
       window.open(`https://wa.me/${OWNER_PHONE}?text=${message}`, "_blank");
     });
   }
-});
-    // Category Filter Logic
-const filterBtns = document.querySelectorAll('.filter-btn');
-const menuItems = document.querySelectorAll('.menu-card');
 
-filterBtns.forEach(btn => {
-  btn.addEventListener('click', () => {
-    // Remove active class from all buttons
-    filterBtns.forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
+  // 3. Category Filter Logic
+  const tabBtns = document.querySelectorAll(".tab-btn");
+  const menuItems = document.querySelectorAll(".menu-card");
 
-    const selectedCategory = btn.getAttribute('data-category');
+  tabBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      tabBtns.forEach((b) => b.classList.remove("active"));
+      btn.classList.add("active");
 
-    menuItems.forEach(item => {
-      if (selectedCategory === 'all' || item.getAttribute('data-category') === selectedCategory) {
-        item.style.display = 'block';
-      } else {
-        item.style.display = 'none';
-      }
+      const selectedCategory = btn.getAttribute("data-category");
+
+      menuItems.forEach((item) => {
+        const itemCategory = item.getAttribute("data-category");
+        if (selectedCategory === "all" || itemCategory === selectedCategory) {
+          item.style.display = "flex";
+        } else {
+          item.style.display = "none";
+        }
+      });
     });
   });
 });
-
