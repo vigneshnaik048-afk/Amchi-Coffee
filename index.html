@@ -5,26 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Amchi Coffee</title>
   <link rel="stylesheet" href="style.css">
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </head>
 <body>
 
   <!-- Navigation Header -->
-<header class="navbar">
-  <ul class="nav-links">
-    <li><a href="#home" id="nav-home" class="active">Home</a></li>
-    <li><a href="#gallery" id="nav-gallery">Gallery</a></li>
-    <li><a href="#reservation" id="nav-reservation">Seat Reservation</a></li>
-    <li><a href="#about-us" id="nav-about">About Us</a></li>
-  </ul>
-</header>
-
+  <header class="navbar">
+    <ul class="nav-links">
+      <li><a href="#home" id="nav-home" class="active">Home</a></li>
+      <li><a href="#gallery" id="nav-gallery">Gallery</a></li>
+      <li><a href="#reservation" id="nav-reservation">Seat Reservation</a></li>
+      <li><a href="#about-us" id="nav-about">About Us</a></li>
+    </ul>
+  </header>
 
   <!-- Logo Section -->
   <section class="logo-container" id="home">
     <div class="logo-badge">
-      <img id="logo" src="https://cdn.phototourl.com/free/2026-08-20-135d36c9-69da-4ed6-b3d7-9aa93bea1901.jpg">
-      
+      <img id="logo" src="https://cdn.phototourl.com/free/2026-08-20-135d36c9-69da-4ed6-b3d7-9aa93bea1901.jpg" alt="Amchi Coffee Logo">
     </div>
   </section>
 
@@ -46,7 +44,6 @@
   <section class="featured-section">
     <h2>Featured Items</h2>
     <div class="cards-grid">
-      
       <div class="card">
         <div class="card-header">
           <div class="card-icon">☕</div>
@@ -55,8 +52,6 @@
         <p>Goan Masala Chai with authentic Goan roasted coffee.</p>
       </div>
 
-      
-
       <div class="card">
         <div class="card-header">
           <div class="card-icon">🍞</div>
@@ -64,7 +59,6 @@
         </div>
         <p>Authentic Pão with Butter, Authentic cappuccino, etc.</p>
       </div>
-
     </div>
   </section>
 
@@ -75,16 +69,16 @@
       <p>Freshly brewed coffee & authentic Goan bites</p>
     </div>
 
+    <!-- Category Filter Tabs -->
     <div class="menu-tabs">
-      <button class="tab-btn active">All</button>
-      <button class="tab-btn">Brews</button>
-      <button class="tab-btn">Snacks</button>
-      <button class="tab-btn">Desserts</button>
+      <button class="tab-btn active" data-category="all">All</button>
+      <button class="tab-btn" data-category="brews">Brews</button>
+      <button class="tab-btn" data-category="snacks">Snacks</button>
+      <button class="tab-btn" data-category="desserts">Desserts</button>
     </div>
 
     <div class="menu-grid">
-
-      <div class="menu-card">
+      <div class="menu-card" data-category="brews">
         <div class="menu-info">
           <div class="item-header">
             <span class="badge veg"></span>
@@ -96,7 +90,7 @@
         <div class="item-price">₹110</div>
       </div>
 
-      <div class="menu-card">
+      <div class="menu-card" data-category="snacks">
         <div class="menu-info">
           <div class="item-header">
             <span class="badge veg"></span>
@@ -107,7 +101,7 @@
         <div class="item-price">₹220</div>
       </div>
 
-      <div class="menu-card">
+      <div class="menu-card" data-category="desserts">
         <div class="menu-info">
           <div class="item-header">
             <span class="badge non-veg"></span>
@@ -119,7 +113,7 @@
         <div class="item-price">₹120</div>
       </div>
 
-      <div class="menu-card">
+      <div class="menu-card" data-category="desserts">
         <div class="menu-info">
           <div class="item-header">
             <span class="badge veg"></span>
@@ -130,7 +124,7 @@
         <div class="item-price">₹80</div>
       </div>
 
-      <div class="menu-card">
+      <div class="menu-card" data-category="brews">
         <div class="menu-info">
           <div class="item-header">
             <span class="badge veg"></span>
@@ -142,7 +136,7 @@
         <div class="item-price">₹40</div>
       </div>
 
-      <div class="menu-card">
+      <div class="menu-card" data-category="snacks">
         <div class="menu-info">
           <div class="item-header">
             <span class="badge veg"></span>
@@ -152,7 +146,6 @@
         </div>
         <div class="item-price">₹30</div>
       </div>
-
     </div>
   </section>
 
@@ -162,18 +155,52 @@
       <div class="story-content">
         <h2>Our Story</h2>
         <div class="story-divider"></div>
-        
-        <p>
-          Tucked away amidst the vibrant, sun-dappled lanes of Goa, <strong>Amchi Coffee</strong> stands as a modern sanctuary. Step across our threshold, and the world outside fades into a peaceful retreat designed to slow time down.
-        </p>
+        <p>Tucked away amidst the vibrant, sun-dappled lanes of Goa, <strong>Amchi Coffee</strong> stands as a modern sanctuary. Step across our threshold, and the world outside fades into a peaceful retreat designed to slow time down.</p>
+        <p>The heavy door shuts out the chaotic streets, replacing them with the grounding hum of an espresso machine and soft acoustic melodies. The air carries a comforting blend—the deep aroma of freshly roasted coffee mingling with local cardamom, ginger, and warm <strong>pão</strong> straight from the oven.</p>
+        <p>Built on the timeless Goan spirit of <em>susegad</em>, we translated slow living for a contemporary generation. Whether you come to focus on work, linger over a tray of <strong>Goan Masala Chai</strong>, or savor a warm slice of layered <strong>Bebinca</strong>, there is zero pressure to hurry away.</p>
+      </div>
+    </div>
+  </section>
 
-        <p>
-          The heavy door shuts out the chaotic streets, replacing them with the grounding hum of an espresso machine and soft acoustic melodies. The air carries a comforting blend—the deep aroma of freshly roasted coffee mingling with local cardamom, ginger, and warm <strong>pão</strong> straight from the oven.
-        </p>
+  <!-- About Us Section -->
+  <section class="about-section">
+    <div class="section-title">
+      <h2>About Amchi Coffee</h2>
+      <p>Where Goan heritage meets modern coffee culture</p>
+    </div>
 
-        <p>
-          Built on the timeless Goan spirit of <em>susegad</em>, we translated slow living for a contemporary generation. Whether you come to focus on work, linger over a tray of <strong>Goan Masala Chai</strong>, or savor a warm slice of layered <strong>Bebinca</strong>, there is zero pressure to hurry away. <strong>Amchi Coffee</strong> is your daily pause button—a modern oasis where you leave feeling completely renewed.
-        </p>
+    <div class="about-grid">
+      <div class="about-card">
+        <div class="about-icon">☕</div>
+        <h3>Artisanal Brews</h3>
+        <p>Single-origin specialty coffee blended with authentic Goan spices and local jaggery.</p>
+      </div>
+
+      <div class="about-card">
+        <div class="about-icon">🌴</div>
+        <h3>Susegad Vibe</h3>
+        <p>A calm, ambient space designed for slow living—whether you're working or relaxing.</p>
+      </div>
+
+      <div class="about-card">
+        <div class="about-icon">🥖</div>
+        <h3>Fresh Bakery</h3>
+        <p>Warm, daily-baked Goan Pão, traditional Bebinca, and savory local snacks.</p>
+      </div>
+    </div>
+
+    <div class="cafe-info-box">
+      <div class="info-item">
+        <strong>📍 Location</strong>
+        <p>Heritage Quarter, Panjim, Goa</p>
+      </div>
+      <div class="info-item">
+        <strong>⏰ Opening Hours</strong>
+        <p>Mon - Sun: 8:00 AM – 10:00 PM</p>
+      </div>
+      <div class="info-item">
+        <strong>⚡ Amenities</strong>
+        <p>High-Speed Wi-Fi • AC Seating • Pet Friendly</p>
       </div>
     </div>
   </section>
@@ -183,49 +210,71 @@
     <a href="#reservation" class="reserve-btn">RESERVE A SEAT NOW</a>
   </div>
 
-<!-- About Us Section -->
-<section class="about-section" id="about-us">
-  <div class="section-title">
-    <h2>About Amchi Coffee</h2>
-    <p>Where Goan heritage meets modern coffee culture</p>
+  <!-- Reservation Popup Modal -->
+  <div class="modal-overlay" id="reservation-modal">
+    <div class="modal-content">
+      <button class="close-btn" id="close-modal">&times;</button>
+      
+      <div id="form-container">
+        <h2>Reserve Your Table</h2>
+        <p>Experience slow living with us</p>
+
+        <form id="reservation-form">
+          <div id="step-1">
+            <div class="form-group">
+              <label>Full Name</label>
+              <input type="text" id="res-name" placeholder="Enter your name" required>
+            </div>
+
+            <div class="form-group">
+              <label>Phone Number</label>
+              <input type="tel" id="res-phone" placeholder="10-digit mobile number" required>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label>Date</label>
+                <input type="date" id="res-date" required>
+              </div>
+              <div class="form-group">
+                <label>Time</label>
+                <input type="time" id="res-time" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Number of Guests</label>
+              <select id="res-guests">
+                <option value="1 Guest">1 Guest</option>
+                <option value="2 Guests" selected>2 Guests</option>
+                <option value="3-4 Guests">3-4 Guests</option>
+                <option value="5+ Guests">5+ Guests</option>
+              </select>
+            </div>
+
+            <button type="button" class="submit-res-btn" id="send-otp-btn">Get OTP Verification</button>
+          </div>
+
+          <div id="step-2" style="display: none;">
+            <div class="form-group">
+              <label>Enter 4-Digit OTP</label>
+              <input type="number" id="res-otp" placeholder="Check alert popup for OTP">
+            </div>
+            <button type="submit" class="submit-res-btn">Confirm Reservation</button>
+          </div>
+        </form>
+      </div>
+
+      <div id="res-success" class="res-success-msg" style="display: none;">
+        <div class="success-icon">🎉</div>
+        <h2>Reservation Confirmed!</h2>
+        <p id="success-details"></p>
+        <button class="close-success-btn" id="done-btn">Done</button>
+      </div>
+
+    </div>
   </div>
 
-  <!-- Key Highlights Grid -->
-  <div class="about-grid">
-    <div class="about-card">
-      <div class="about-icon">☕</div>
-      <h3>Artisanal Brews</h3>
-      <p>Single-origin specialty coffee blended with authentic Goan spices and local jaggery.</p>
-    </div>
-
-    <div class="about-card">
-      <div class="about-icon">🌴</div>
-      <h3>Susegad Vibe</h3>
-      <p>A calm, ambient space designed for slow living—whether you're working or relaxing.</p>
-    </div>
-
-    <div class="about-card">
-      <div class="about-icon">🥖</div>
-      <h3>Fresh Bakery</h3>
-      <p>Warm, daily-baked Goan Pão, traditional Bebinca, and savory local snacks.</p>
-    </div>
-  </div>
-
-  <!-- Café Info Card -->
-  <div class="cafe-info-box">
-    <div class="info-item">
-      <strong>📍 Location</strong>
-      <p>Heritage Quarter, Panjim, Goa</p>
-    </div>
-    <div class="info-item">
-      <strong>⏰ Opening Hours</strong>
-      <p>Mon - Sun: 8:00 AM – 10:00 PM</p>
-    </div>
-    <div class="info-item">
-      <strong>⚡ Amenities</strong>
-      <p>High-Speed Wi-Fi • AC Seating • Pet Friendly</p>
-      <p></p>
-      <p></p>
-    </div>
-  </div>
-  </section>
+</body>
+    </html>
+    
