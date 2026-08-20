@@ -682,26 +682,3 @@ section {
   cursor: pointer;
   }
 
-.filter-container {
-  display: flex;
-  justify-content: center;
-  gap: 8px;
-  margin: 15px 0;
-}
-
-.filter-btn {
-  background-color: #3b1b1f;
-  color: #e5d3c9;
-  border: 1px solid #7a2b34;
-  padding: 6px 14px;
-  border-radius: 16px;
-  font-size: 12px;
-  cursor: pointer;
-}
-
-.filter-btn.active {
-  background-color: #e5d3c9;
-  color: #2b0c10;
-  font-weight: bold;
-}
-
