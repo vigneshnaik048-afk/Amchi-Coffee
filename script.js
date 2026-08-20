@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const navResBtn = document.getElementById("nav-reservation");
   const bottomBarBtn = document.querySelector(".reserve-btn");
 
-  const OWNER_PHONE = "919876543210"; 
+  const OWNER_PHONE = "919623923560"; 
   let generatedOTP = null;
 
   const openModal = (e) => {
