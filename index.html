@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amchi Coffee</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation Header -->
+<header class="navbar">
+  <ul class="nav-links">
+    <li><a href="#home" id="nav-home" class="active">Home</a></li>
+    <li><a href="#gallery" id="nav-gallery">Gallery</a></li>
+    <li><a href="#reservation" id="nav-reservation">Seat Reservation</a></li>
+    <li><a href="#about-us" id="nav-about">About Us</a></li>
+  </ul>
+</header>
+
+
+  <!-- Logo Section -->
+  <section class="logo-container" id="home">
+    <div class="logo-badge">
+      <img id="logo" src="https://cdn.phototourl.com/free/2026-08-20-135d36c9-69da-4ed6-b3d7-9aa93bea1901.jpg">
+      
+    </div>
+  </section>
+
+  <!-- Horizontal Image Gallery Row -->
+  <section class="gallery-wrapper" id="gallery">
+    <button class="scroll-btn left" id="slide-left" aria-label="Previous">&#10094;</button>
+    
+    <div class="gallery-scroll" id="gallery-container">
+      <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=300" alt="Coffee Beans">
+      <img src="https://images.unsplash.com/photo-1534778101976-62847782c213?w=300" alt="Cappuccino">
+      <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=300" alt="Café Interior">
+    </div>
+
+    <button class="scroll-btn right" id="slide-right" aria-label="Next">&#10095;</button>
+    <div class="overlay-title">Explore Our Flavors</div>
+  </section>
+
+  <!-- Featured Items Section -->
+  <section class="featured-section">
+    <h2>Featured Items</h2>
+    <div class="cards-grid">
+      
+      <div class="card">
+        <div class="card-header">
+          <div class="card-icon">☕</div>
+          <div class="card-title">Goan Masala Chai</div>
+        </div>
+        <p>Goan Masala Chai with authentic Goan roasted coffee.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="card-icon">🍞</div>
+          <div class="card-title">Authentic Pão with Butter</div>
+        </div>
+        <p>Authentic Pão with Butter, Authentic cappuccino, etc.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Menu Section -->
+  <section class="menu-section" id="menu">
+    <div class="section-title">
+      <h2>Our Menu</h2>
+      <p>Freshly brewed coffee & authentic Goan bites</p>
+    </div>
+
+    <div class="menu-tabs">
+      <button class="tab-btn active">All</button>
+      <button class="tab-btn">Brews</button>
+      <button class="tab-btn">Snacks</button>
+      <button class="tab-btn">Desserts</button>
+    </div>
+
+    <div class="menu-grid">
+
+      <div class="menu-card">
+        <div class="menu-info">
+          <div class="item-header">
+            <span class="badge veg"></span>
+            <h3 class="item-name">Cappuccino</h3>
+            <span class="popular-tag">Classic</span>
+          </div>
+          <p class="item-desc">Rich espresso shot topped with steamed milk and a thick layer of creamy foam.</p>
+        </div>
+        <div class="item-price">₹110</div>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-info">
+          <div class="item-header">
+            <span class="badge veg"></span>
+            <h3 class="item-name">Margherita Pizza</h3>
+          </div>
+          <p class="item-desc">Thin-crust wood-fired pizza topped with fresh tomato sauce, mozzarella, and basil.</p>
+        </div>
+        <div class="item-price">₹220</div>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-info">
+          <div class="item-header">
+            <span class="badge non-veg"></span>
+            <h3 class="item-name">Traditional Bebinca</h3>
+            <span class="popular-tag">Goan Special</span>
+          </div>
+          <p class="item-desc">Authentic 7-layered warm pudding made with fresh coconut milk, nutmeg, and ghee.</p>
+        </div>
+        <div class="item-price">₹120</div>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-info">
+          <div class="item-header">
+            <span class="badge veg"></span>
+            <h3 class="item-name">Goan Dodol</h3>
+          </div>
+          <p class="item-desc">Rich and chewy traditional sweet crafted from Goan jaggery, coconut milk, and cashews.</p>
+        </div>
+        <div class="item-price">₹80</div>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-info">
+          <div class="item-header">
+            <span class="badge veg"></span>
+            <h3 class="item-name">Goan Masala Chai</h3>
+            <span class="popular-tag">Popular</span>
+          </div>
+          <p class="item-desc">Freshly brewed tea infused with local Goan spices, ginger, and lemongrass.</p>
+        </div>
+        <div class="item-price">₹40</div>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-info">
+          <div class="item-header">
+            <span class="badge veg"></span>
+            <h3 class="item-name">Authentic Pão with Butter</h3>
+          </div>
+          <p class="item-desc">Freshly baked local Goan crusty bread served warm with salted butter.</p>
+        </div>
+        <div class="item-price">₹30</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Our Story Section -->
+  <section class="story-section" id="about-us">
+    <div class="story-overlay">
+      <div class="story-content">
+        <h2>Our Story</h2>
+        <div class="story-divider"></div>
+        
+        <p>
+          Tucked away amidst the vibrant, sun-dappled lanes of Goa, <strong>Amchi Coffee</strong> stands as a modern sanctuary. Step across our threshold, and the world outside fades into a peaceful retreat designed to slow time down.
+        </p>
+
+        <p>
+          The heavy door shuts out the chaotic streets, replacing them with the grounding hum of an espresso machine and soft acoustic melodies. The air carries a comforting blend—the deep aroma of freshly roasted coffee mingling with local cardamom, ginger, and warm <strong>pão</strong> straight from the oven.
+        </p>
+
+        <p>
+          Built on the timeless Goan spirit of <em>susegad</em>, we translated slow living for a contemporary generation. Whether you come to focus on work, linger over a tray of <strong>Goan Masala Chai</strong>, or savor a warm slice of layered <strong>Bebinca</strong>, there is zero pressure to hurry away. <strong>Amchi Coffee</strong> is your daily pause button—a modern oasis where you leave feeling completely renewed.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fixed Bottom Bar -->
+  <div class="bottom-bar">
+    <a href="#reservation" class="reserve-btn">RESERVE A SEAT NOW</a>
+  </div>
+
+<!-- About Us Section -->
+<section class="about-section" id="about-us">
+  <div class="section-title">
+    <h2>About Amchi Coffee</h2>
+    <p>Where Goan heritage meets modern coffee culture</p>
+  </div>
+
+  <!-- Key Highlights Grid -->
+  <div class="about-grid">
+    <div class="about-card">
+      <div class="about-icon">☕</div>
+      <h3>Artisanal Brews</h3>
+      <p>Single-origin specialty coffee blended with authentic Goan spices and local jaggery.</p>
+    </div>
+
+    <div class="about-card">
+      <div class="about-icon">🌴</div>
+      <h3>Susegad Vibe</h3>
+      <p>A calm, ambient space designed for slow living—whether you're working or relaxing.</p>
+    </div>
+
+    <div class="about-card">
+      <div class="about-icon">🥖</div>
+      <h3>Fresh Bakery</h3>
+      <p>Warm, daily-baked Goan Pão, traditional Bebinca, and savory local snacks.</p>
+    </div>
+  </div>
+
+  <!-- Café Info Card -->
+  <div class="cafe-info-box">
+    <div class="info-item">
+      <strong>📍 Location</strong>
+      <p>Heritage Quarter, Panjim, Goa</p>
+    </div>
+    <div class="info-item">
+      <strong>⏰ Opening Hours</strong>
+      <p>Mon - Sun: 8:00 AM – 10:00 PM</p>
+    </div>
+    <div class="info-item">
+      <strong>⚡ Amenities</strong>
+      <p>High-Speed Wi-Fi • AC Seating • Pet Friendly</p>
+    </div>
+  </div>
+  </section>
